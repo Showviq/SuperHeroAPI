@@ -8,7 +8,7 @@ var ConnectionStrings = builder.Configuration.GetConnectionString("DefaultConnec
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DataContext>(options =>
 {
-    options.UseMySql(ConnectionStrings,ServerVersion.AutoDetect(ConnectionStrings) );
+    options.UseMySQL(ConnectionStrings);
 });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
